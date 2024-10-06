@@ -10,9 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/css/tom-select.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1 class="bg-slate-600">Nav</h1>
-    </header>
+
     <main>
         {{ $slot }}
     </main>
