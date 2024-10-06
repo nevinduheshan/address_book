@@ -22,6 +22,12 @@ class Customer extends Model
     {
         return $this->hasMany(Address::class);
     }
+
+    public function projects()
+    {
+        return $this->belongsToMany(Project::class);
+    }
+
 }
 
 

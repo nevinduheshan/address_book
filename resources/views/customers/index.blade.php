@@ -63,7 +63,7 @@
 
         <!-- Add Customer Modal -->
         <div id="addCustomerModal"
-            class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+            class="hidden fixed inset-0 z-50 items-center justify-center bg-black bg-opacity-50">
             <div class="bg-white rounded-lg shadow p-6 w-full max-w-lg">
                 <h2 class="text-xl font-bold mb-4">Add Customer</h2>
 
