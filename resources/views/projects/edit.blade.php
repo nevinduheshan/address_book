@@ -10,8 +10,8 @@
 
             <!-- Project Name -->
             <div class="mb-4">
-                <label for="name" class="block font-semibold">Project Name</label>
-                <input type="text" name="name" id="name" class="border w-full p-2 rounded"
+                <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Project Name</label>
+                <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     value="{{ old('name', $project->name) }}" required>
                 @error('name')
                     <span class="text-red-500 text-sm">{{ $message }}</span>
@@ -20,8 +20,8 @@
 
             <!-- Project Description -->
             <div class="mb-4">
-                <label for="description" class="block font-semibold">Project Description</label>
-                <textarea name="description" id="description" class="border w-full p-2 rounded">{{ old('description', $project->description) }}</textarea>
+                <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Project Description</label>
+                <textarea name="description" id="description" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">{{ old('description', $project->description) }}</textarea>
                 @error('description')
                     <span class="text-red-500 text-sm">{{ $message }}</span>
                 @enderror
@@ -29,8 +29,8 @@
 
             <!-- Select Customers -->
             <div class="mb-4">
-                <label for="customers" class="block font-semibold">Select Customers</label>
-                <select name="customers[]" id="customers" class="border w-full p-2 rounded" multiple required>
+                <label for="customers" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select Customers</label>
+                <select name="customers[]" id="customers" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" multiple required>
                     @foreach ($customers as $customer)
                         <option value="{{ $customer->id }}"
                             {{ in_array($customer->id, $project->customers->pluck('id')->toArray()) ? 'selected' : '' }}>
@@ -45,7 +45,7 @@
 
             <!-- Submit Button -->
             <div class="flex justify-end">
-                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Update Project</button>
+                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Update Project</button>
             </div>
         </form>
     </div>
