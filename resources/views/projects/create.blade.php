@@ -44,15 +44,5 @@
             </div>
         </form>
     </div>
-    <script>
-        // Initialize Tom Select on the customer select element
-        new TomSelect("#customers",{
-            plugins: ['remove_button'], // Optionally add a remove button for selected items
-            create: false, // Disable the ability to create new items (only select existing customers)
-            maxItems: null, // Allow selecting multiple items
-            searchField: 'text', // Use text search field for searching
-            placeholder: "Select customers...",
-        });
-    </script>
 
 </x-layout>
