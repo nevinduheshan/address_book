@@ -49,4 +49,21 @@
             </div>
         </form>
     </div>
+
+    <!-- Include Tom Select CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.css" rel="stylesheet">
+
+    <!-- Include Tom Select JS from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
+
+
+    <!-- Initialize Tom Select -->
+    <script>
+        new TomSelect("#customers", {
+            maxItems: null,
+            plugins: ['remove_button'],
+            create: false,
+            placeholder: "Select a customer...",
+        });
+    </script>
 </x-layout>
