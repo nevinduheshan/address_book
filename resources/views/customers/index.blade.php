@@ -85,7 +85,7 @@
 
 
         <!-- Pagination Links -->
-        <div class="mt-4">
+        <div class="mt-4 mb-4">
             {{ $customers->links() }}
         </div>
 
@@ -176,7 +176,6 @@
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            // Check on page load if we need to hide/show the delete button
             toggleDeleteButtons();
         });
 
@@ -187,15 +186,11 @@
             <button type="button" class="bg-green-500 text-white px-2 py-1 rounded delete-address" onclick="removeAddress(this)">Delete</button>
         </div>`;
             document.getElementById('extra-addresses').insertAdjacentHTML('beforeend', newAddress);
-
-            // After adding a new address, check the number of address sections
             toggleDeleteButtons();
         }
 
         function removeAddress(button) {
             button.closest('div').remove();
-
-            // After removing an address, check the number of address sections
             toggleDeleteButtons();
         }
 
